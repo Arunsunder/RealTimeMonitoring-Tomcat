@@ -1,0 +1,35 @@
+
+
+body{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1{
+    text-align: center;
+    color:black;
+}
+#upload-section{
+    text-align: center;
+    margin:auto;
+    display: block;
+}
+h4{
+    font-size: 19px;
+    color: purple;
+}
+#fileList{
+    padding: 12px;
+    margin-top: 30px;
+    text-align: left;
+    margin-left:300px;
+    margin-right:300px;
+    background-color:white;
+    border: 3px solid black;
+}
+#upload{
+    background-color: darkgreen;
+    color:white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+

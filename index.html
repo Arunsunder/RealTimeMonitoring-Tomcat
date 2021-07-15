@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Monitoring></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+    <script src="script.js"></script>
+    <h1>FILE MONITORING</h1>
+</head>
+<body>
+    <div id="upload-section">
+        <h4>Upload the files to be monitored</h4>
+        <form method="post"  id="file-upload"  name="Form" onsubmit=" return validfield()" action="Fileupload">
+            <h5>Enter the filepath separated by ';'</h5>
+            <textarea name="files" id="files"  rows="10" cols="50" required=""></textarea><br>
+<!--                <div id="fileList">
+                </div>-->
+                <input type="submit" value="Upload" id="upload">
+        </form>
+    </div>
+    <div id="content" style="display: none">
+        <form id="eord"  action="UpdateDb" method="post">
+            <table border="1px" width="500px">
+                <thead><tr><th></th><th>FilePath</th><th>FileName</th><th>Status</th><th>Event</th></tr> </thead>
+                <tbody id="displaytable">  
+                
+                </tbody>
+                
+            </table>
+              <input type="submit" value="Enable/Disable"/>
+<!--           <button type="button"  action="UpdateDb"  onclick="fetch('MonitorandDemonitor')" >Enable/Disable</button>-->
+            <button type="button" onclick="Monitor('ThreadRunnable')"> Check Status</button>
+            
+        </form>      
+    </div>
+    
+</body>
+ <script src="script.js"></script>
+</html>
